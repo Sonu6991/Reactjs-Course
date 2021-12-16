@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>New binding or Constructor invocation</title>
+      </head>
+
+      <body>
+            <script>
+                  // New binding or Constructor invocation
+                  //without return
+
+                  function secondFunction() {
+                        this.obj = {
+                              key: 1,
+                              str: "Using new binding"
+                        }
+                        this.innerFunction = function () {
+                              console.log(this);
+                        }
+                  }
+                  var newObj = new secondFunction();
+                  newObj.innerFunction();
+
+
+                  // with return
+
+                  function secondFunction() {
+                        obj = {
+                              key: 1,
+                              str: "Using new binding"
+                        }
+                        innerFunction = function () {
+                              console.log(this);
+                        }
+                        return { obj, innerFunction }
+                  }
+                  var newObj = new secondFunction();
+                  console.log(newObj);
+            </script>
+      </body>
+
+</html>

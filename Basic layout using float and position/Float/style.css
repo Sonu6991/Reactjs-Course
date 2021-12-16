@@ -1,0 +1,41 @@
+BODY {
+	margin:0;
+	padding:0;
+}
+
+.header {
+	width:100%;
+	height:10%;
+	background-color:blue;
+	color:white;
+	text-align:center;
+}
+.main {
+	height:80%;
+	
+}
+
+.main div {
+	height:100%;
+	//position:relative;
+	float:left;
+	text-align:center;
+}
+
+.a1, .a3 {
+	width:20%;
+	background-color:skyblue;	
+}
+
+.a2 {
+	width:60%;
+	background-color:orange;
+}
+
+.footer {
+	width:100%;
+	height:10%;
+	background-color:blue;
+	color:white;
+	text-align:center;
+}

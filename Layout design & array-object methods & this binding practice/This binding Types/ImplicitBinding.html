@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Implicit Binding or Method invocation</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      </head>
+
+      <body>
+
+            <script>
+                  // Implicit Binding or Method invocation
+
+                  function simpleFunction() {
+
+                        console.log(this);
+                  }
+                  var obj = {
+                        key: 1,
+                        function: simpleFunction
+                  }
+
+                  obj.function();
+                  // Nested Function
+                  var obj1 = {
+                        key: 1,
+                        outer: function () {   //this is implicit binding returns obj1
+                              console.log(this);
+                              function inner() {   //this is default binding returns window object
+                                    console.log(this);
+                              }
+                              inner();
+                        },
+                  }
+                  obj1.outer();
+
+                  //Method separated from the object
+                  function simpleFunction() {
+
+                        console.log(this);
+                  }
+                  var obj = {
+                        key: 1,
+                        function: simpleFunction
+                  }
+                  // obj.function();
+                  var newvariable = obj.function;  //store object method in to a variable
+                  newvariable();  //It directy calls simpleFunction saperatly and returns widnow object,
+            </script>
+      </body>
+
+</html>

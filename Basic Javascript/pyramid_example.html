@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pyramid Example</title>
+    </head>
+
+    <body>
+        <label for="input_number">Enter Number</label>
+        <input type="number" name="" id="input_number" onchange="show_pyramid()">
+        <!-- <button type="button" onclick="show_pyramid()">submit -->
+        </button>
+        <div id=container>
+        </div>
+    </body>
+    <script>
+        function show_pyramid() {
+            // var number = document.getElementById('input_number').value;
+            // for (var i = 1; i <= number; i++) {
+            //     for (var j = 1; j <= i; j++) {
+            //         document.write(' * ');
+            //     }
+            //     document.write("<br>"); 
+            // }
+            // printd in html document
+
+
+            var number = document.getElementById('input_number').value;
+            var data = '';
+            for (var i = 1; i <= number; i++) {
+                for (var j = 1; j <= i; j++) {
+                    data += " * ";
+                }
+                data += "\n";
+            }
+            document.getElementById('container').innerText = data;
+
+            // triangle pyramid
+
+            // var number = document.getElementById('input_number').value;
+            // for (var i = 1; i <= number; i++) {
+            //     for (var j = i; j <= number; j++) {
+            //         document.write(' &nbsp;');
+            //     }
+            //     for (var k = 1; k <= i; k++) {
+            //         document.write('* &nbsp; ');
+            //     }
+            //     document.write("<br>");
+
+
+
+            // }
+        }
+    </script>
+
+</html>

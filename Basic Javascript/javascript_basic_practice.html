@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!-------------------- getElementsByName & getElementsByTagName -------------------->
+        <!-- <input type="checkbox" name="hobbies" id="checkbox1">Singing
+        <input type="checkbox" name="hobbies" id="checkbox2">Dancing
+        <input type="checkbox" name="hobbies" id="checkbox3">Reading
+        <input type="checkbox" name="hobbies" id="checkbox4">Travelling -->
+
+        <input type="text" name="input_1" id="input_1">
+        <button onclick="call()">
+            Click me
+        </button>
+
+    </body>
+    <script>
+        function call() {
+            /*--------------------------- BOM -----------------------------------------------------*/
+
+            //Open a new window
+            // open("https://www.google.com")
+            //close current window
+            // window.close();
+
+            //Navigator object
+            // document.write(navigator.appName + "<br>");
+            // document.write(navigator.appCodeName + "<br>");
+            // document.write(navigator.appversion + "<br>");
+            // document.write(navigator.language + "<br>");
+            // document.write(navigator.platform + "<br>");
+            // document.write(navigator.userAgent + "<br>");
+            // document.write(navigator.onLine + "<br>");
+            //     document.write(navigator.cookieEnabled + "<br>");
+            //     document.write(navigator.javaEnabled + "<br>");
+
+            //screen object
+            // document.writeln(screen.width + "<br>");
+            // document.writeln(screen.availWidth + "<br>");
+            // document.writeln(screen.height + "<br>");
+            // document.writeln(screen.availHeight + "<br>");
+            // document.writeln(screen.colorDepth + "<br>");
+            // document.writeln(screen.pixelDepth + "<br>");
+
+            /*--------------------------- DOM -----------------------------------------------------*/
+            // Document
+            // var data = document.getElementById("input_1");
+            // console.log(data);
+
+            // var data = document.getElementsByName('hobbies');
+            // console.log("total hobbies :" + data.length);
+            // var data = document.getElementsByTagName('input');
+            // console.log("total inputs :" + data.length);
+
+        }
+    </script>
+
+</html>

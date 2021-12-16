@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Explicit Binding</title>
+      </head>
+
+      <body>
+            <script>
+                  // Call()
+                  function simpleFunction(val1, val2) {
+                        var result = val1 + val2;
+                        console.log(this.str + " and result: " + result);
+                  }
+                  var obj = {
+                        key: 1,
+                        str: "this is a object"
+                  }
+
+                  simpleFunction.call(obj, 2, 4);
+
+                  // Apply()
+                  simpleFunction.apply(obj, [1, 2]);
+
+                  // bind() 
+                  // also known as Bound function
+
+                  var boundFunction = simpleFunction.bind(obj);
+                  boundFunction(4, 6);
+
+
+            </script>
+      </body>
+
+</html>

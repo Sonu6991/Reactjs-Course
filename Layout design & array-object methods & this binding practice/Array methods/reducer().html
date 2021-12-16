@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>reducer</title>
+      </head>
+
+      <body>
+            <script>
+
+                  //return result
+                  const array = [15, 16, 17, 18, 19];
+                  console.log(array);
+                  function reducer(previous, sfsd) {
+                        const total = previous + sfsd;
+                        console.log(`previous: ${previous}, sfsd: ${sfsd}, total: ${total}`);
+                        return total;
+                  }
+                  array.reduce(reducer);
+                  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+                  // Reduce with initial value
+                  function initValueReducer(previous, sfsd) {
+                        const returns = previous + sfsd;
+                        console.log(`previous: ${previous}, sfsd: ${sfsd}, total: ${returns}`);
+                        return returns;
+                  }
+                  array.reduce(initValueReducer, 10)
+            </script>
+      </body>
+
+</html>

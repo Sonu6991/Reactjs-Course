@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+     </head>
+
+     <body>
+          <script>
+
+               let fruits1 = ['Apple', 'Banana', 'Mengo', 'Pinapple', 'Orange', 'Lichi'];
+
+
+               //********Shallow copies part of an array to another location in the same array and returns it without modifying its length. ********************//
+
+               let copyWithin = fruits1.copyWithin(2);                    // return an new array of concated elements. 
+               console.log(copyWithin);
+
+               let copyWithin1 = fruits1.copyWithin(0, 2,4);
+               console.log(copyWithin1);
+
+
+          </script>
+     </body>
+
+</html>

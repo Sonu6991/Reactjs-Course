@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>includes</title>
+      </head>
+
+      <body>
+            <script>
+                  //check existance of value/element in an array
+
+                  const array1 = [1, 2, 3];
+                  console.log(array1.includes(2));                //returns booleans value
+
+                  const pets = ['cat', 'dog', 'bat'];
+                  console.log(pets.includes('cat', 1));  //false
+                  console.log(pets.includes('bat', -1)); //true
+                  console.log(pets.includes('bat', -1)); //true
+                  console.log(pets.includes('bat', -2)); //true
+            </script>
+      </body>
+
+</html>

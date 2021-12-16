@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <title>Regex searching</title>
+            <style>
+                  .higlight {
+                        background-color: yellow;
+                  }
+            </style>
+      </head>
+
+      <body>
+            <p id="p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum culpa perspiciatis nisi
+                  voluptas blanditiis odit velit delectus, ipsum odio nobis assumenda eveniet doloremque autem quisquam
+                  eaque? Tempora asperiores @Rx facilis unde natus quibusdam error iusto voluptates est alias, numquam
+                  odit @Rx laudantium possimus minima, fugiat maiores porro totam corporis labore eligendi nemo
+                  distinctio culpa.
+                  Aspernatur eos perferendis incidunt et eligendi rem illo natus id iure tenetur quasi, temporibus
+                  doloribus veritatis, libero omnis @Ix modi sit ipsum quod eveniet ad soluta perspiciatis. @Ix
+                  Provident
+                  quia,
+                  blanditiis, ipsam odio animi cum vel @Ix fugiat autem itaque praesentium tenetur numquam facere,
+                  reprehenderit rem reiciendis natus. Minima, aspernatur!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum culpa perspiciatis nisi
+                  voluptas blanditiis odit velit delectus, ipsum odio nobis assumenda eveniet doloremque autem quisquam
+                  eaque? Tempora asperiores @Rx facilis unde natus quibusdam error iusto voluptates est alias, numquam
+                  odit @Rx laudantium possimus minima, fugiat maiores porro totam corporis labore eligendi nemo
+                  distinctio culpa.
+                  Aspernatur eos perferendis incidunt et eligendi rem illo natus id iure tenetur quasi, temporibus
+                  doloribus veritatis, libero omnis @Ix modi sit ipsum quod eveniet ad soluta perspiciatis. @Ix
+                  Provident
+                  quia,
+                  blanditiis, ipsam odio animi cum vel @Ix fugiat autem itaque praesentium tenetur numquam facere,
+                  reprehenderit rem reiciendis natus. Minima, aspernatur!
+            </p>
+
+            <script>
+                  let str = "sonu"
+                  // console.log = () => null;
+
+                  String.prototype.distance = function (char) {
+                        var index = this.indexOf(char);
+
+                        if (index === -1) {
+                              console.log(char + " does not appear in " + this);
+                        } else {
+                              console.log(char + " is " + (this.length - index) + " characters from the end of the string!");
+                        }
+                  };
+
+                  str.distance("o");
+
+                  console.log(String.prototype);
+
+                  let newReg = new RegExp(/(@Rx|@Ix)/g);
+                  $("#p").html($("#p").html().replace(newReg, '<span class="higlight">$1</span>',))
+
+            </script>
+
+      </body>
+
+</html>

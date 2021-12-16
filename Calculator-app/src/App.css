@@ -1,0 +1,16 @@
+.calculator {
+  /* width: 20vw; */
+  height: 60vh;
+}
+.title {
+  /* width: 23.5rem; */
+  height: 6rem;
+}
+
+.background {
+  background-color: #b9b7bd !important;
+}
+input,
+input:active {
+  background-color: #e9ecef !important;
+}

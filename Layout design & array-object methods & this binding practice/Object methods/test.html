@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+      </head>
+
+      <body>
+            <script>
+                  // Temporal Dead Zone
+                  // According to this definition, the answer to our question is yes. let variables are hoisted, but they are not initialized with undefined. Thus, they exist in a time period called the “Temporal Dead Zone” from the start of the block until their definition is evaluated. Trying to access them in TDZ throws a ReferenceError, as seen in the example.
+                  // const a=0;
+                  function test() {
+                        console.log(a);
+
+                  }
+                  test();
+            </script>
+      </body>
+
+</html>

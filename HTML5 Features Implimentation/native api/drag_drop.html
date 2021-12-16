@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Drag and drop api example </title>
+		<link rel="stylesheet" href="drag_drop.css" >
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="container" ondragover="allowDrop(event)" ondrop="drop(event)">
+				<img  id="drag_image" src="undraw_happy_news_hxmt.svg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div>
+
+		<script>
+			function drag(event){
+				event.dataTransfer.setData("text",event.target.id);
+			}
+			function allowDrop(event){
+				event.preventDefault();
+			}
+			function drop(event){
+				event.preventDefault();
+				var data=event.dataTransfer.getData("text");
+				console.log(data);
+				event.target.appendChild(document.getElementById(data));
+			}
+
+		</script>
+	</body>
+
+</html>

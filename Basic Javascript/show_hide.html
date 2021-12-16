@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id='paragraph'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ratione quibusdam amet aut eaque,
+                repellendus odit nostrum saepe praesentium tenetur sapiente ad, expedita quae voluptate assumenda eos
+                est
+                accusantium ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perspiciatis temporibus ea
+                sapiente. Quidem quis perspiciatis illum voluptas a quae eum eveniet. Iusto, molestias voluptas
+                consequuntur
+                aliquam necessitatibus numquam eum iste a aut minima illum maxime repellat vero quod? Sunt odio aliquid
+                commodi totam eius voluptatibus? Corrupti, architecto quaerat illo vero et assumenda deserunt
+                repudiandae
+                totam ipsum. Placeat quibusdam deleniti repellendus rem cumque! Illum voluptatem earum vitae sapiente
+                voluptatibus culpa explicabo! Quia eaque dolor omnis laudantium ad sapiente id qui praesentium
+                asperiores
+                animi quos vitae inventore beatae adipisci voluptates, nihil ea sequi ipsam, quam quod dicta delectus
+                necessitatibus perspiciatis! Id?
+            </p>
+            <button id='submit' type="button" onclick="toggle()" name="submit">
+                show
+            </button>
+        </div>
+        <script>
+            var paragraph = document.getElementById('paragraph');
+            paragraph.style.display = 'none';
+            function toggle() {
+                var btn = document.getElementById('submit');
+                if (btn.innerText === 'show') {
+                    paragraph.style.display = 'block';
+                    btn.innerText = 'Hide'
+                }
+                else {
+                    paragraph.style.display = 'none';
+                    btn.innerText = 'show'
+                }
+            }
+        </script>
+    </body>
+
+</html>

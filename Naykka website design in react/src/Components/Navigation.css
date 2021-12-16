@@ -1,0 +1,13 @@
+.navigations-container {
+  background-color: #ffffff;
+}
+
+.navigations {
+  opacity: 0.5;
+  margin: 0;
+  padding: 8px;
+}
+
+.navigations li {
+  margin-left: 35px;
+}

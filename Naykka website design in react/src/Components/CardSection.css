@@ -1,0 +1,15 @@
+.card-section {
+  display: flex;
+  align-items: center;
+}
+.filter-container {
+  width: 20vw;
+  padding: 0px 10px;
+  align-self: flex-start;
+}
+.card-container {
+  width: 80vw;
+  display: flex;
+  padding: 0px 10px;
+  flex-wrap: wrap;
+}

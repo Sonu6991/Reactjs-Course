@@ -1,0 +1,91 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-container {
+  min-width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #000;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(209, 155, 7);
+}
+
+.todoInput {
+  outline: none;
+  width: 260px;
+  padding: 15px;
+  color: #ccc;
+  font-size: 20px;
+  border: 1px solid rgb(209, 155, 7);
+  border-radius: 10px;
+}
+.btnAdd {
+  margin-left: 10px;
+  width: 90px;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(209, 155, 7);
+  cursor: pointer;
+}
+.list {
+  width: 220px;
+  background-color: #000;
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+  color: rgb(209, 155, 7);
+}
+
+.list-items {
+  display: flex;
+  margin: 20px 0px;
+  border: 1px solid rgb(209, 155, 7);
+  max-height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.btn-complete {
+  color: green;
+  margin-right: 10px;
+}
+.btn-edit {
+  color: rgb(209, 155, 7);
+  margin-right: 10px;
+}
+.btn-delete {
+  color: red;
+  margin-right: 10px;
+}
+.task-btn {
+  background-color: #000;
+  border: none;
+}
+.task-btn i {
+  font-size: 1.2rem;
+}
+.complete {
+  text-decoration-style: bold;
+  text-decoration-line: line-through;
+  opacity: 0.6;
+}

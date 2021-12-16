@@ -1,0 +1,50 @@
+* {
+	margin: 0 auto;
+}
+
+div {
+	height:200px;
+	width:200px;
+	margin:5px;
+}
+.box1 {
+	background-color:red;
+	position:relative;
+	top:205px;
+	left: 205px;
+
+	/* Relative--------------- 
+	position:relative;
+	top:205px;
+	left: 205px;
+	*/
+
+
+	/* Absolute--------------- 
+	position:absolute;
+	top:210px;
+	left: 205px;
+	*/
+
+}
+.box2 {
+	background-color:lightgreen;
+	/* sticky---------------
+	position:sticky;
+	top:210px;
+	left:210px;
+	*/
+
+	/* fixed---------------
+	position:fixed;
+	top:205px;
+	left:210px;
+	*/
+}
+.box3 {
+	background-color:yellow;
+	
+}
+.box4 {
+	background-color:skyblue;
+}

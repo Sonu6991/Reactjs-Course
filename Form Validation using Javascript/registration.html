@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/7fe8f52306.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="registration.css">
+        <style>
+            .error {
+                color: red;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+
+    <body style="overflow: hidden;">
+        <!-- <p style="color: red;" id="erroMsg"></p> -->
+        <!-- <p style="color: red;" id="erroMsg1"></p> -->
+        <section class="vh-100 " style="background-color: aliceblue;">
+            <div class="row d-flex justify-content-center align-items-center h-100 ">
+                <div class="col-10 col-md-7 col-lg-10 col-xl-8 col-xxl-6 ">
+                    <div class="card text-white bg-dark row align-items-center" style="border-radius: 25px; ">
+                        <div class="card-body p-md-5 col-10">
+
+                            <p class="h1 text-center fw-bold mb-4">New Registration</p>
+                            <form action="" id="registrationForm">
+                                <div class="form-outline flex-fill mb-2" id="innerdiv1">
+                                    <label for="fName" class="form-label">Firstname</label>
+                                    <input type="text" class="form-control" id="fName" name="fName">
+                                    <p id="error1" class="error"></p>
+                                </div>
+                                <div class="form-outline flex-fill mb-2" id="innerdiv2">
+                                    <label for="lName" class="form-label">Lastname</label>
+                                    <input type="text" class="form-control" id="lName" name="lName">
+                                    <p id="error2" class="error"></p>
+                                </div>
+                                <div class="form-outline flex-fill mb-2" id="innerdiv3">
+                                    <label for="dob" class="form-label">Date of birth</label>
+                                    <input type="date" class="form-control" id="dob" name="dob">
+                                    <p id="error3" class="error"></p>
+                                </div>
+                                <div class="form-outline flex-fill mb-2" id="innerdiv4">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea name="address" id="address" cols="30" rows="3"
+                                        class="form-control"></textarea>
+                                    <p id="error4" class="error"></p>
+                                </div>
+                                <div class="form-outline flex-fill mb-2" id="innerdiv5">
+                                    <label for="contactNo" class="form-label">Contact no.</label>
+                                    <input type="text" class="form-control" id="contactNo">
+                                    <p id="error5" class="error"></p>
+                                </div>
+                                <div class="form-outline flex-fill mb-2" id="innerdiv6">
+                                    <label for="contactNo" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contactNo">
+                                    <p id="error6" class="error"></p>
+                                </div>
+                                <div class="d-flex justify-content-center mx-4 mb-lg-4">
+                                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="registration.js"></script>
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

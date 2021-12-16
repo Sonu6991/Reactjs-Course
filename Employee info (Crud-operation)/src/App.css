@@ -1,0 +1,61 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.employee-wrapper {
+  height: 100vh;
+}
+
+.employee-wrapper::before {
+  content: "";
+  background: no-repeat url("../src/source/notebook-natural-laptop-macbook.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+}
+
+.title {
+  background-color: rgba(0, 0, 0, 0.561);
+}
+.form-container {
+  top: 100px;
+  left: 100px;
+  background-color: rgba(0, 0, 0, 0.561);
+  display: inline-block;
+}
+.form-container input {
+  background: transparent;
+}
+.lable {
+  font-weight: 400;
+  font-size: 1.1rem !important;
+}
+.employee-record {
+  /* background-color: rgba(0, 0, 0, 0.561); */
+  position: absolute;
+  /* left: 800px; */
+  right: 100px;
+  top: 100px;
+}
+
+.employee-table {
+  background-color: rgba(0, 0, 0, 0.281);
+}
+.table-header {
+  background-color: rgba(0, 0, 0, 0.349) !important;
+}
+.text-outline {
+  -webkit-text-stroke: 0.3px white;
+}
+.input-text {
+  color: rgba(255, 255, 255, 0.466) !important;
+}
+.input-text:focus {
+  background: transparent !important;
+
+  box-shadow: none;
+}

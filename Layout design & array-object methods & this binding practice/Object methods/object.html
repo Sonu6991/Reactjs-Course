@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+      </head>
+
+      <body>
+            <script>
+                  // created empty object
+                  const obj = new Object();
+                  obj.fname = "sonu"
+                  obj.lname = "Chauhan"
+                  obj.age = 21;
+                  console.log(obj);
+                  // created object of variables
+                  const fname = "sonu";
+                  const lname = "Chauhan"
+                  const age = 21;
+
+                  const person = new Object({ fname, lname, age });
+                  console.log(person);
+
+                  // Object.assign()
+
+
+                  const target = { fname: 'unknown', lname: 'unknown', };
+                  const source = { fname: 'sonu ', lname: 'chauhan', };
+                  Object.assign(target, source);
+                  console.log(target);
+
+
+                  // log string eith object
+                  console.log(`sjsdgvdh:`, target);
+                  console.log("dhasfsjk", target, "fsfygdj");
+
+                  // Cloning an object
+                  const clone = Object.assign({}, source);
+                  console.log(clone);
+
+
+                  // The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+
+                  let createObj = Object.create(obj);
+                  console.log(createObj);
+
+
+                  // isisPrototypeOf()  //Object.getPrototypeOf()
+                  console.log("isPrototypeOf : ", obj.isPrototypeOf(createObj));
+                  console.log("getPrototypeOf : ", Object.getPrototypeOf(createObj));
+
+
+                  // Object.getOwnPropertyDescriptor() //Object.getOwnPropertyDescriptors()
+
+                  console.log("getOwnPropertyDescriptor : ", Object.getOwnPropertyDescriptor(obj, "fname"));
+
+                  console.log("getOwnPropertyDescriptors : ", Object.getOwnPropertyDescriptors(obj));
+
+                  let createObj1 = new Object(obj);
+                  console.log(createObj1);
+
+
+
+
+                  // The static method Object.defineProperties() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+
+                  let defineProp = {
+                        name: "sonu"
+                  };
+                  Object.defineProperties(defineProp, {
+                        location:
+                        {
+                              value: {
+                                    state: "Guj",
+                                    city: "Ahmedabad"
+                              }
+                        },
+                        age: {
+                              value: 21
+                        }
+
+                  });
+                  console.log(defineProp);
+
+                  // The static method Object.defineProperty() defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+
+                  Object.defineProperty(defineProp, " location1", {
+                        value: {
+                              state: "Guj",
+                              city: "Ahmedabad"
+                        }
+                  });
+                  console.log(defineProp);
+
+                  // iterable, numerable
+
+                  const names = ["sonu", "tejas", "ajay"];
+
+                  names.age = {
+                        sonu: 21,
+                        tejas: 25,
+                        ajay: 20
+                  }
+                  console.log(names);
+                  for (let i of names) {
+                        console.log("iterates array", i);
+                  }
+                  for (let p in names) {
+                        console.log("inumerables ", p);
+                  }
+
+                  // Object.entries()
+                  const car = {
+                        name: "innova",
+                        modelNo: 12324,
+                        comanyNME: "DHSDGD",
+                  }
+                  // const [key, value] = Object.entries(car);
+                  // console.log(key, value);
+                  console.log(Object.entries(car));
+
+
+                  // Object.freeze(car)
+                  car.name = "sfsgfs";
+                  console.log(car);
+
+                  const student = new Map([
+                        [
+                              ["first name", "last name"],
+                              ["sumit", "ghosh"]
+                        ],
+                        [
+                              ["age", "city"],
+                              ["21", "ahmedabad"]
+                        ]
+                  ]);
+
+                  console.log(student);
+
+
+                  console.log(Object.fromEntries(student));
+
+
+                  // function delay(sec) {
+                  //       let a = b = Date.now();
+                  //       let count = 1
+
+                  //       while (b - a < (sec * 1000)) {
+                  //             console.log(count);
+                  //             count++;
+                  //             b = Date.now();
+                  //       }
+                  // }
+                  // delay(5)
+                  // console.log("fsdgfbh");
+
+                  console.log(Object.keys(car));
+                  console.log(Object.hasOwn(car, "name"));
+                  console.log(car.hasOwnProperty('name'));
+
+                  console.log(Object.is(false, false));
+                  console.log(Object.is("foo", "foo"));
+
+
+                  // preventExtensions
+                  Object.preventExtensions(car);
+                  // // isExtensible
+                  console.log("isExtensible>>>>>>>>>>>>>>>>", Object.isExtensible(car));
+                  car.xyz = "fhsdf";
+                  console.log("car>>>>>>>>>>>>>>>>", car);
+
+                  delete car.modelNo;
+                  console.log("car>>>>>>>>>>>>>>>>", car);
+
+                  // template string
+                  console.log(`this &nbsp; is 
+                   a tempate string`);
+                  console.log("this &nbsp; is <br> &nbsp; a tempate string");
+                  document.write("this &nbsp; is <br>  &nbsp; a tempate string");
+                  console.log(car.toString());
+
+                  // Destructuring
+                  const [a, b, ...rest] = [10, 20, 30, 40, 50];
+                  console.log(a, b, rest);
+
+                  const numbers = { x: 12, y: 20, z: 30 }
+                  // const numbers1 = [12, 20, 30]
+                  const { x: q, ...xyz } = numbers;
+                  console.log(q, xyz);
+
+                  // const val = [...numbers1, "jdsh", "fsdfjh"]
+                  // console.log(val);
+                  // const val1 = { ...numbers, sdvd: "vbvjb" }
+                  // console.log(val1);
+            </script>
+      </body>
+
+</html>

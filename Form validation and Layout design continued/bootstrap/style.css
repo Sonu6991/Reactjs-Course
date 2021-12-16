@@ -1,0 +1,61 @@
+.font1 {
+  font-family: "Rubik", sans-serif;
+  color: #234ba5;
+}
+.font2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  color: #234ba5;
+}
+
+.font3 {
+  font-family: "Rubik", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #234ba5;
+}
+
+.img-height {
+  height: 20vh;
+}
+@media (max-width: 576px) {
+  .img-height {
+    height: 30vh;
+  }
+}
+@media (min-width: 768px) {
+  .img-height {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .img-height {
+    height: 50vh;
+  }
+  .card {
+    height: 200px;
+  }
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(35, 75, 165, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler {
+  border-color: #234ba5 !important;
+}
+a {
+  border-bottom: 3px solid #234ba5;
+}
+a:hover,
+a:active {
+  border-bottom: 3px solid red;
+}
+.image-box {
+  border: 4px solid rgb(223, 71, 89);
+}
+.card {
+  border-radius: 30px !important;
+  justify-content: center;
+  align-items: center;
+}

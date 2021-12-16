@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript example</title>
+    </head>
+
+    <body>
+        <!-- <div>
+            <form action="">
+                <input type="text" id="input" class="text">
+                <button type="button" onclick="call()">submit</button>
+            </form>
+        </div> -->
+
+        <!-- Foward backward by passing parameters -->
+        <div>
+            <input type="text" id="text1">
+            <button type="button" onclick="swap('text1','text2')">forward</button>
+            <button type="button" onclick="swap('text2','text1')">backward</button>
+            <input type="text" id="text2">
+        </div>
+
+        <!-- common funtion without parameters -->
+        <!-- <div>
+            <input type="text" id="text1">
+            <button type="button" onclick="swap()">Swap</button>
+            <input type="text" id="text2">
+        </div> -->
+
+    </body>
+
+    <script>
+        // function call() {
+        //     // var data = document.getElementById("input").value;
+        //     var data = document.getElementsByClassName("text").value;
+
+        //     console.log(data);
+
+        //     alert(data);
+        // }
+        // function forward() {
+
+        //     var data = document.getElementById("text1").value;
+        //     var set = document.getElementById("text2").value = data;
+        //     var set = document.getElementById("text1").value = "";
+
+        // }
+        // function back() {
+        //     var data = document.getElementById("text2").value;
+        //     var set = document.getElementById("text1").value = data;
+        //     var set = document.getElementById("text2").value = "";
+
+        // }
+        function swap(fromId, toId) {
+            document.getElementById(toId).value = document.getElementById(fromId).value;
+            document.getElementById(fromId).value = "";
+
+        }
+        // function swap() {
+
+        //     if (document.getElementById("text1").value && !document.getElementById("text2").value) {
+        //         document.getElementById("text2").value = document.getElementById("text1").value;
+        //         document.getElementById("text1").value = "";
+        //     } else if (!document.getElementById("text1").value && document.getElementById("text2").value) {
+        //         document.getElementById("text1").value = document.getElementById("text2").value;
+        //         document.getElementById("text2").value = "";
+        //     } else {
+        //         alert("Either both are empty or both are filled..!")
+        //     }
+        // }
+    </script>
+
+</html>

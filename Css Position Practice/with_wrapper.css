@@ -1,0 +1,47 @@
+
+.box1,.box3, .box4 {
+	height:200px;
+	width:200px;
+	margin:5px;
+}
+
+.box1 {
+	float:left;
+	background-color:red;
+}
+.box2 {
+	float:left;
+	position:relative;
+	background-color:lightgreen;
+	height:400px;
+	width:400px;
+	margin:5px;
+}
+.box3 {
+	clear:both;
+	background-color:yellow;
+	position:absolute;
+	top:210px;
+}
+.box4 {
+	
+	clear:both;
+	background-color:skyblue;
+}
+
+.box2 div {
+	
+	height:80px;
+	width:80px;
+	background-color:gray;
+	margin:5px;
+	color:white
+}
+.inner_box1 {
+	//position:relative;
+	//left:100px;
+}
+.inner_box2 {
+	position:absolute;
+	left:100px;
+} 
