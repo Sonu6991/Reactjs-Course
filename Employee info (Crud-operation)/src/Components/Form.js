@@ -4,21 +4,47 @@ import Title from "./Title";
 export default class Form extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      inputs: {},
+    };
   }
+
+  edit = (data) => {
+    console.log(data);
+    this.setState({
+      inputs: {
+        fname: data.fname,
+        lname: data.lname,
+        email: data.email,
+        contact: data.contact,
+        salary: data.salary,
+        gender: data.gender,
+      },
+    });
+  };
+
+  onChange = (event, name) => {
+    this.setState({
+      inputs: { ...this.state.inputs, [name]: event.target.value },
+    });
+  };
 
   sumbimHandler = (event) => {
     event.preventDefault();
-    let inputs = {
-      fname: event.target.fname.value,
-      lname: event.target.lname.value,
-      email: event.target.email.value,
-      contact: event.target.contact.value,
-      salary: event.target.salary.value,
-      gender: event.target.gender.value,
-    };
+    this.props.formSubmit(this.state.inputs, this.reset);
+  };
 
-    this.props.formSubmit(inputs);
-    event.target.reset();
+  reset = () => {
+    this.setState({
+      inputs: {
+        fname: "",
+        lname: "",
+        email: "",
+        contact: "",
+        salary: "",
+        gender: "",
+      },
+    });
   };
 
   render() {
@@ -36,7 +62,11 @@ export default class Form extends Component {
                 type="text"
                 id="fname"
                 name="fname"
-                defaultValue={this.props.editEmployee.fname}
+                required
+                value={this.state.inputs.fname}
+                onChange={(event) => {
+                  this.onChange(event, "fname");
+                }}
               />
             </div>
             <div className="flex-grow-1">
@@ -48,7 +78,11 @@ export default class Form extends Component {
                 type="text"
                 id="lname"
                 name="lname"
-                defaultValue={this.props.editEmployee.lname}
+                required
+                value={this.state.inputs.lname}
+                onChange={(event) => {
+                  this.onChange(event, "lname");
+                }}
               />
             </div>
           </div>
@@ -61,7 +95,13 @@ export default class Form extends Component {
               type="email"
               id="email"
               name="email"
-              defaultValue={this.props.editEmployee.email}
+              required
+              value={this.state.inputs.email}
+              required
+              onChange={(event) => {
+                this.onChange(event, "email");
+                this.props.emailValidation(event.target.value);
+              }}
             />
           </div>
           <div className="mt-3">
@@ -73,7 +113,12 @@ export default class Form extends Component {
               type="text"
               id="contact"
               name="contact"
-              defaultValue={this.props.editEmployee.contact}
+              required
+              value={this.state.inputs.contact}
+              onChange={(event) => {
+                this.onChange(event, "contact");
+                this.props.cantactValidation(event.target.value);
+              }}
             />
           </div>
           <div className="mt-3 d-flex ">
@@ -86,7 +131,11 @@ export default class Form extends Component {
                 type="text"
                 id="salary"
                 name="salary"
-                defaultValue={this.props.editEmployee.salary}
+                required
+                value={this.state.inputs.salary}
+                onChange={(event) => {
+                  this.onChange(event, "salary");
+                }}
               />
             </div>
             <div className="flex-grow-1">
@@ -100,6 +149,10 @@ export default class Form extends Component {
                   id="male"
                   name="gender"
                   value="male"
+                  onChange={(event) => {
+                    this.onChange(event, "gender");
+                  }}
+                  required
                 />
                 <label className="lable text-white me-2" htmlFor="male">
                   Male
@@ -110,6 +163,10 @@ export default class Form extends Component {
                   id="female"
                   name="gender"
                   value="female"
+                  onChange={(event) => {
+                    this.onChange(event, "gender");
+                  }}
+                  required
                 />
                 <label className="lable text-white " htmlFor="female">
                   Female

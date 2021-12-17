@@ -1,12 +1,30 @@
 import React, { Component } from "react";
+import ModalBOx from "./ModalBOx";
 
 export default class TableRow extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      modalShow: false,
+      isDelete: false,
+    };
+  }
+
   editHandler = () => {
     this.props.editemployee(this.props.data.emp_id);
   };
+
   employeedelete = () => {
+    this.setState({
+      modalShow: true,
+    });
+  };
+
+  onOk = () => {
     this.props.deleteEmployee(this.props.data.emp_id);
   };
+
   render() {
     return (
       <tr className=" text-white ">
@@ -32,6 +50,17 @@ export default class TableRow extends Component {
             ></span>
           </div>
         </td>
+
+        <ModalBOx
+          messsage="Are sure to delete the record?"
+          onOk={this.onOk}
+          show={this.state.modalShow}
+          onHide={() => {
+            this.setState({
+              modalShow: false,
+            });
+          }}
+        />
       </tr>
     );
   }
