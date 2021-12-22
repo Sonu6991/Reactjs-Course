@@ -10,10 +10,10 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <PropsChildren />
+        {/* <PropsChildren /> */}
         {/* <Ref />  */}
         {/* <ErroBoundaryWrapper />  */}
-        {/* <HOCComp /> */}
+        <HOCComp />
         {/* <MouseTracker /> */}
       </>
     );
