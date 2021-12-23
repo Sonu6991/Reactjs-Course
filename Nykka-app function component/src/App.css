@@ -1,0 +1,86 @@
+.logo {
+  height: 40px;
+}
+header {
+  z-index: 5;
+}
+.friday-sale {
+  background: url("https://adn-static1.nykaa.com/media/wysiwyg/2021/topstrips14.jpg");
+  background-size: cover;
+  padding: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.herobox {
+  background: url("https://images-static.nykaa.com/uploads/7ec82dc0-0a76-437a-bb53-bb31b691388a.jpg?tr=w-1200,cm-pad_resize");
+  background-size: cover;
+  height: 25vh;
+}
+.filter-container {
+  width: 20vw;
+  padding: 0px 10px;
+  align-self: flex-start;
+  top: 110px;
+}
+.card-container {
+  width: 80vw;
+  padding: 0px 10px;
+}
+.card {
+  max-width: 260px;
+}
+.card-price {
+  font-weight: 500;
+}
+.card-font-color {
+  color: #fc2779;
+}
+.card-addtocart {
+  background-color: #fc2779;
+}
+.card-discount {
+  font-weight: 500;
+}
+.filter {
+  border-radius: 0px 0px 0.25rem 0.25rem !important;
+  border-left: 1px solid #dee2e6 !important;
+  border-right: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+.filter li {
+  padding: 8px 6px;
+  border-top: 1px solid #dee2e6;
+  padding-left: 10px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+/* .filter {
+  top: 13vh;
+} */
+
+.filter-input {
+  height: 20px !important;
+  width: 20px !important;
+}
+.filter-font {
+  font-size: 12px;
+}
+.font-size {
+  font-size: 14px;
+}
+.white-space {
+  white-space: nowrap;
+}
+.applied-filter {
+  border-radius: 0.25rem 0.25rem 0px 0px !important;
+}
+.applied-filter-items {
+  background-color: rgba(252, 39, 121, 0.05);
+  border: 1px solid #fc2779;
+  width: min-content;
+}
+.font-weight {
+  font-weight: 500;
+}

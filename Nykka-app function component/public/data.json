@@ -1,0 +1,167 @@
+[
+  {
+    "product_id": 1,
+    "title": "DailyObjects Burgundy Faux Leather Fatty Women's Tote Bag ",
+    "rating": 65,
+    "review": 12,
+    "cutoff": 2499,
+    "price": 1299,
+    "discount": 48,
+    "color": "red",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nykdaoj005001_1.jpg"
+  },
+  {
+    "product_id": 2,
+    "title": "DailyObjects Butterflies And Hibiscus Flowers - Trapeze Crossbody Bag",
+    "rating": 87,
+    "review": 18,
+    "price": 1099,
+    "cutoff": 1999,
+    "discount": 45,
+    "color": "gray",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/u/but-and-hib-flo-mck-trapeze__1.jpg"
+  },
+  {
+    "product_id": 3,
+    "title": "DailyObjects And Love What You Do Arch Crossbody Bag",
+    "rating": 69,
+    "review": 16,
+    "price": 1249,
+    "cutoff": 1999,
+    "discount": 38,
+    "color": "black",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nykdaoj005044.jpg"
+  },
+  {
+    "product_id": 4,
+    "title": "DailyObjects How to Chill Like A Cat - Trapeze Crossbody Bag",
+    "rating": 64,
+    "review": 11,
+    "price": 1099,
+    "cutoff": 1999,
+    "discount": 45,
+    "color": "blue",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/h/o/how-to-chi-lik-a-mck-trapeze__1.jpg"
+  },
+  {
+    "product_id": 5,
+    "title": "DailyObjects Ddrypp Zip Wallet",
+    "rating": 64,
+    "review": 8,
+    "price": 849,
+    "cutoff": 1999,
+    "discount": 58,
+    "color": "green",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/d/d/ddrypp-jms-zip-wallet__1.jpg"
+  },
+  {
+    "product_id": 6,
+    "title": "DailyObjects Pass This On Fatty Tote Bag",
+    "rating": 61,
+    "review": 12,
+    "price": 1299,
+    "cutoff": 2499,
+    "discount": 48,
+    "color": "multi",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nykdaoj002693__1_.png"
+  },
+  {
+    "product_id": 7,
+    "title": "DailyObjects Girl In Flowerland - Trapeze Crossbody Bag",
+    "rating": 58,
+    "review": 11,
+    "price": 1099,
+    "cutoff": 1999,
+    "discount": 45,
+    "color": "blue",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/g/i/gir-in-flo-anh-trapeze__1.jpg"
+  },
+  {
+    "product_id": 8,
+    "title": "DailyObjects Silver Metallic Fatty Tote Bag",
+    "rating": 53,
+    "review": 12,
+    "price": 2499,
+    "cutoff": 1299,
+    "discount": 48,
+    "color": "white",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nykdaoj002722_1_.png"
+  },
+  {
+    "product_id": 9,
+    "title": "DailyObjects Mustard Flowers - Orbis Crossbody Bag",
+    "rating": 58,
+    "review": 11,
+    "price": 1149,
+    "cutoff": 2499,
+    "discount": 54,
+    "color": "yellow",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/1/81f2445must-flow-dob-orbis-crossbody-bag.jpg"
+  },
+  {
+    "product_id": 10,
+    "title": "DailyObjects Lush Midnight - Orbis Crossbody Bag",
+    "rating": 38,
+    "review": 13,
+    "price": 1249,
+    "cutoff": 2499,
+    "discount": 50,
+    "color": "green",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/3/3333445lush-midn-dob-orbis-crossbody-bag.jpg"
+  },
+  {
+    "product_id": 11,
+    "title": "DailyObjects Black Faux Leather Fatty Women's Tote Bag",
+    "rating": 42,
+    "review": 6,
+    "price": 1399,
+    "cutoff": 2499,
+    "discount": 44,
+    "color": "black",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nykdaoj004999_1.jpg"
+  },
+  {
+    "product_id": 12,
+    "title": "DailyObjects Black Faux Leather - Trapeze Crossbody Bag",
+    "rating": 57,
+    "review": 18,
+    "price": 1199,
+    "cutoff": 1999,
+    "discount": 40,
+    "color": "black",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/l/blk-fau-leather-trapeze__1.jpg"
+  },
+  {
+    "product_id": 13,
+    "title": "DailyObjects Be A Little Wild Carry-All Pouch Medium",
+    "rating": 14,
+    "review": 3,
+    "price": 599,
+    "cutoff": 799,
+    "discount": 25,
+    "color": "white",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/e/be-a-lit-wil-slk-clutch-med.jpg"
+  },
+  {
+    "product_id": 14,
+    "title": "Dailyobjects Burgundy Vegan Leather Zippered Sleeve For Laptop/macbook - 11 Inch",
+    "rating": 3,
+    "review": 0,
+    "price": 949,
+    "cutoff": 1399,
+    "discount": 32,
+    "color": "red",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/c/2/c219702burg-beg-leather-mc-11_1.jpg"
+  },
+  {
+    "product_id": 15,
+    "title": "DailyObjects Lush Midnight - Trapeze Crossbody Bag",
+    "rating": 36,
+    "review": 6,
+    "price": 1199,
+    "cutoff": 2499,
+    "discount": 52,
+    "color": "green",
+    "img": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/f/9/f931445lush-midn-dobk-trapeze-crossbody-bag.jpg"
+  }
+]
