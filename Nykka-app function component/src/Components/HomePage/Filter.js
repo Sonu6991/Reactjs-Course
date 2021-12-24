@@ -5,38 +5,36 @@ const Filter = () => {
   const [isPrice, setIsPrice] = useState(false);
   const [isDiscount, setIsDiscount] = useState(false);
   const [isColor, setIsColor] = useState(false);
-  const [filterInputs, setFilterInputs] = useState({
-    price: [],
-    discount: "",
-    color: [],
-  });
-  const { filterProducts, displayAppliedfilter, setRemoveFilter } =
-    useContext(productContext);
+  // const [filterInputs, setFilterInputs] = useState({
+  //   price: [],
+  //   discount: "",
+  //   color: [],
+  // });
+  const { onFilterChange } = useContext(productContext);
 
   const getInputs = (e) => {
-    const { name, value, checked } = e.target;
+    // if (name === "color") {
+    //   checked
+    //     ? filterInputs[name].push(value)
+    //     : filterInputs[name].splice(filterInputs[name].indexOf(value), 1);
+    // } else if (name === "price") {
+    //   if (checked) {
+    //     filterInputs[name].push(value.split("_"));
+    //   } else {
+    //     filterInputs[name].forEach((ele, index) => {
+    //       if (ele[0] === value.split("_")[0]) {
+    //         filterInputs[name].splice(index, 1);
+    //       }
+    //     });
+    //   }
+    // } else {
+    //   filterInputs[name] = value;
+    // }
 
-    if (name === "color") {
-      checked
-        ? filterInputs[name].push(value)
-        : filterInputs[name].splice(filterInputs[name].indexOf(value), 1);
-    } else if (name === "price") {
-      if (checked) {
-        filterInputs[name].push(value.split("_"));
-      } else {
-        filterInputs[name].forEach((ele, index) => {
-          if (ele[0] === value.split("_")[0]) {
-            filterInputs[name].splice(index, 1);
-          }
-        });
-      }
-    } else {
-      filterInputs[name] = value;
-    }
-
-    setFilterInputs(filterInputs);
-    displayAppliedfilter(filterInputs);
-    filterProducts(filterInputs);
+    // setFilterInputs(filterInputs);
+    // displayAppliedfilter(filterInputs);
+    // filterProducts(filterInputs);
+    onFilterChange(e.target);
   };
 
   return (
@@ -246,7 +244,7 @@ const Filter = () => {
         <div id="price">
           <ul className="d-flex flex-column list-unstyled opacity-75 py-2  filter-font">
             <li className="py-2 d-flex justify-content-between">
-              <span>Multi-Color </span>
+              <span>Multi</span>
               <span className="background-color: aquamarine;">
                 <input
                   className="form-check-input filter-input"

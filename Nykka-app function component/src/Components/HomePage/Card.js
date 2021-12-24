@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ data }) => {
   const navigate = useNavigate();
   const viewProduct = () => {
-    console.log("clicked");
     let path = `/Product/${data.product_id}`;
     navigate(path, { state: { id: 1, name: "sabaoon" } });
   };

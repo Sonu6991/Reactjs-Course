@@ -4,21 +4,20 @@ export const productContext = createContext();
 export const ProductContextProvider = (props) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [appliedFilters, setAppliedFilters] = useState([]);
+  const [filterInputs, setFilterInputs] = useState({
+    price: [],
+    discount: "",
+    color: [],
+  });
 
   /////*****************Fatch all products from json file*****************//
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
-      .then(
-        (data) => {
-          setProducts(data);
-          setFilteredProducts(data);
-        },
-        (error) => {
-          console.log("error", error);
-        }
-      )
+      .then((data) => {
+        setProducts(data);
+        setFilteredProducts(data);
+      })
       .catch((error) => {
         console.log(error);
       });
@@ -50,48 +49,70 @@ export const ProductContextProvider = (props) => {
     setFilteredProducts(array);
   };
 
-  /////*****************Add applied filters in 'applied filter container'*****************//
-  const displayAppliedfilter = (filterInputs) => {
-    let a = [];
-    if (filterInputs.price.length !== 0) {
-      filterInputs.price.map((price) => {
-        a.push(`Rs. ${price[0]} - Rs. ${price[1]}`);
-      });
+  /////*****************adding applied filters in 'applied filter container'*****************//
+  const onFilterChange = (target) => {
+    const { name, value, checked } = target;
+    if (name === "color") {
+      checked
+        ? filterInputs[name].push(value)
+        : filterInputs[name].splice(filterInputs[name].indexOf(value), 1);
+    } else if (name === "price") {
+      if (checked) {
+        filterInputs[name].push(value.split("_"));
+      } else {
+        filterInputs[name].forEach((ele, index) => {
+          if (ele[0] === value.split("_")[0]) {
+            filterInputs[name].splice(index, 1);
+          }
+        });
+      }
+    } else {
+      checked ? (filterInputs[name] = value) : (filterInputs[name] = "none");
     }
-    if (filterInputs.discount !== "none" && filterInputs.discount !== "") {
-      a.push(`${filterInputs.discount}% And Above`);
-    }
-    if (filterInputs.color.length !== 0) {
-      filterInputs.color.map((color) => {
-        a.push(color.charAt(0).toUpperCase() + color.slice(1));
-      });
-    }
-    setAppliedFilters(a);
+
+    setFilterInputs(filterInputs);
+    filterProducts(filterInputs);
   };
 
-  /////*****************delete applied filetr when user click on it'*****************//
-  const deleteAppliedFilter = (value) => {
-    if (value === "Clear") {
+  /////*****************delete applied filter when user click on it or click on "clearAll"'*****************//
+  const deleteAppliedFilter = (name, value) => {
+    if (name === "Clear") {
       [...document.querySelectorAll(".form-check-input")].map((input) => {
         if (input.checked) {
+          let target = {
+            name: input.name,
+            value: input.value,
+            checked: false,
+          };
           input.checked = !input.checked;
+          onFilterChange(target);
         }
       });
-      setAppliedFilters([]);
-      setFilteredProducts(products);
     } else {
-      setAppliedFilters(
-        appliedFilters.filter((ele) => ele !== appliedFilters[value])
-      );
+      let a = "";
+      if (name === "price") {
+        a = value.join("_");
+      } else {
+        a = value;
+      }
+      let input = document.querySelector(`[value='${a}']`);
+      if (input.checked) {
+        let target = {
+          name: input.name,
+          value: input.value,
+          checked: false,
+        };
+        input.checked = false;
+        onFilterChange(target);
+      }
     }
   };
 
   const value = {
-    filterProducts,
     filteredProducts,
-    displayAppliedfilter,
-    appliedFilters,
+    filterInputs,
     deleteAppliedFilter,
+    onFilterChange,
   };
 
   return (

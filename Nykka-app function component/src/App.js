@@ -15,14 +15,16 @@ function App() {
       <BrowserRouter>
         <ProductContextProvider>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/add-product" element={<ProductForm />} />
-            <Route path="/contactus" element={<ContactUs />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/Product/:id" element={<CardView />} />
-            <Route path="*" element={<Homepage />} />
-          </Routes>
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/add-product" element={<ProductForm />} />
+              <Route path="/contactus" element={<ContactUs />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/Product/:id" element={<CardView />} />
+              <Route path="*" element={<Homepage />} />
+            </Routes>
+          </div>
         </ProductContextProvider>
       </BrowserRouter>
     </>

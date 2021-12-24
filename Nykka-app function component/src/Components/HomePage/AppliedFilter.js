@@ -1,9 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { productContext } from "../context/ProductContextProvider";
+import AppliedFilterList from "./AppliedFilterList";
 
 export const AppliedFilter = () => {
-  const { appliedFilters, deleteAppliedFilter } = useContext(productContext);
-  // console.log("appliedFilters", appliedFilters);
+  const { filterInputs, deleteAppliedFilter } = useContext(productContext);
+  const [price, setPrice] = useState([]);
+  const [discount, setDiscount] = useState("");
+  const [color, setColor] = useState([]);
+
+  useEffect(() => {
+    for (let key in filterInputs) {
+      if (key === "price") {
+        setPrice(filterInputs[key]);
+      } else if (key === "discount") {
+        setDiscount(filterInputs[key]);
+      } else {
+        setColor(filterInputs[key]);
+      }
+    }
+  });
+
   return (
     <div className="card border-bottom-0 applied-filter">
       <div className="card-body">
@@ -21,25 +37,37 @@ export const AppliedFilter = () => {
           </span>
         </div>
         <div id="filter_container">
-          {appliedFilters.map((filter, index) => {
-            // console.log("filter", filter);
-            return (
-              <div
-                key={index}
-                className="rounded-pill py-1 px-3 d-flex  align-items-center applied-filter-items mt-2"
-              >
-                <span className="font-size card-font-color white-space">
-                  {filter}
-                </span>
-                <span
-                  className="fas fa-times-circle ms-3  card-font-color"
-                  onClick={() => {
-                    deleteAppliedFilter(index);
-                  }}
-                ></span>
-              </div>
-            );
-          })}
+          {discount !== "none" && discount !== "" ? (
+            <AppliedFilterList
+              key={discount}
+              name="discount"
+              value={discount}
+              deleteAppliedFilter={deleteAppliedFilter}
+            />
+          ) : null}
+          {price.length !== 0 &&
+            price.map((price, index) => {
+              return (
+                <AppliedFilterList
+                  key={index}
+                  name="price"
+                  value={price}
+                  deleteAppliedFilter={deleteAppliedFilter}
+                />
+              );
+            })}
+
+          {color.length !== 0 &&
+            color.map((color, index) => {
+              return (
+                <AppliedFilterList
+                  key={index}
+                  name="color"
+                  value={color}
+                  deleteAppliedFilter={deleteAppliedFilter}
+                />
+              );
+            })}
         </div>
       </div>
     </div>
