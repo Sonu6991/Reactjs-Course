@@ -3,3 +3,7 @@ export const actiontypes = {
   DECREMENT: "DECREMENT",
   RESET: "RESET",
 };
+
+export const userActionTypes = {
+  FETCH: "FETCH",
+};

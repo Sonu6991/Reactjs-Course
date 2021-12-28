@@ -21,7 +21,7 @@ class Counter extends Component {
 
 const displyaCounter = (state) => {
   return {
-    counter: state.counter,
+    counter: state.counterReducer.counter,
   };
 };
 
