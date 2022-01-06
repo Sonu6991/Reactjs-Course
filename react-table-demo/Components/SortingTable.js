@@ -1,88 +1,12 @@
 import React from "react";
 import { useSortBy, useTable } from "react-table";
 import classes from "./Table.module.css";
+import tabledata from "../tabledata.json";
+import colums from "../colums";
 
 const SortingTable = () => {
-  const data = React.useMemo(
-    () => [
-      {
-        firstName: "Sonu",
-        lastName: "Chauhan",
-        gender: "Female",
-        age: "21",
-        contact: "1234567890",
-        description:
-          "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae suscipit blanditiis reprehenderit placeat ",
-      },
-      {
-        firstName: "Teajs",
-        lastName: "Patel",
-        gender: "Male",
-        age: "22",
-        contact: "2153486745",
-        description:
-          "amet consectetur adipisicing elit. Eaque explicabo magnam quod accusantium necessitatibus optio temporibus eligendi suscipit quo rerum",
-      },
-      {
-        firstName: "Ajay",
-        lastName: "Divaraniya",
-        gender: "Male",
-        age: "21",
-        contact: "3256987425",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque explicabo magnam quod accusantium necessitatibus optio temporibus eligendi suscipit quo rerum.",
-      },
-    ],
-    []
-  );
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Name",
-        Footer: "Name",
-        columns: [
-          {
-            Header: "First name",
-            Footer: "First name",
-            accessor: "firstName", // accessor is the "key" in the data
-          },
-          {
-            Header: "Last name",
-            Footer: "Last name",
-            accessor: "lastName", // accessor is the "key" in the data
-          },
-        ],
-      },
-      {
-        Header: "Info",
-        Footer: "Info",
-        columns: [
-          {
-            Header: "Gender",
-            Footer: "Gender",
-            accessor: "gender", // accessor is the "key" in the data
-          },
-          {
-            Header: "Age",
-            Footer: "age",
-            accessor: "age", // accessor is the "key" in the data
-          },
-          {
-            Header: "Contact no",
-            Footer: "Contact no",
-            accessor: "contact", // accessor is the "key" in the data
-          },
-        ],
-      },
-      {
-        Header: "Description",
-        Footer: "Description",
-        accessor: "description",
-        // columns: [],
-      },
-    ],
-    []
-  );
+  const data = React.useMemo(() => tabledata, []);
+  const columns = React.useMemo(() => colums, []);
   const table = useTable({ columns, data }, useSortBy);
 
   const {
@@ -95,7 +19,7 @@ const SortingTable = () => {
   } = table;
   return (
     <div>
-      <h1>Table</h1>
+      <h1>Sorting Table</h1>
       <table className={classes.table} {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (

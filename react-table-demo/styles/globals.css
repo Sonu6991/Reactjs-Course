@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.dropdown-menu {
+  /* border: 1px solid red !important; */
+  /* position: fixed !important; */
+  /* left: 10px !important;
+  top: 50px !important; */
+}
+li {
+  border: 1px solid red !important;
+}

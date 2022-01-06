@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { useTable, useGlobalFilter } from "react-table";
-import SearchInput from "./SearchInput";
+import React from "react";
+import { useTable } from "react-table";
 import classes from "./Table.module.css";
 import tabledata from "../tabledata.json";
 import colums from "../colums";
 
-const FilteringTable = () => {
+const RowSelection = () => {
   const data = React.useMemo(() => tabledata, []);
   const columns = React.useMemo(() => colums, []);
-  const table = useTable({ columns, data }, useGlobalFilter);
+  const table = useTable({ columns, data });
 
   const {
     getTableProps,
@@ -17,16 +16,10 @@ const FilteringTable = () => {
     rows,
     prepareRow,
     footerGroups,
-    state,
-    setGlobalFilter,
   } = table;
-
-  const { globalFilter } = state;
-
   return (
     <div>
-      <h1>Filtering Table</h1>
-      <SearchInput filter={globalFilter} setFilter={setGlobalFilter} />
+      <h1>Table</h1>
       <table className={classes.table} {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -51,18 +44,9 @@ const FilteringTable = () => {
             );
           })}
         </tbody>
-        {/* <tfoot>
-          {footerGroups.map((footergroup) => (
-            <tr {...footergroup.getFooterGroupProps()}>
-              {footergroup.headers.map((column) => (
-                <th {...column.getFooterProps()}>{column.render("Footer")}</th>
-              ))}
-            </tr>
-          ))}
-        </tfoot> */}
       </table>
     </div>
   );
 };
 
-export default FilteringTable;
+export default RowSelection;
