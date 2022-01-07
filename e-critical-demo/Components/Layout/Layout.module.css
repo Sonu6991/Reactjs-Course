@@ -1,0 +1,26 @@
+.header,
+.footer {
+  background-color: #673ab7;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.header {
+  position: sticky;
+  top: 0%;
+  justify-content: space-between;
+  z-index: 10;
+  height: 5vh;
+}
+.footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0%;
+}
+.main {
+  min-height: 90vh;
+}
+.translate-middle {
+  font-size: 14px !important;
+  padding: 3.5px 6.5px !important;
+}
