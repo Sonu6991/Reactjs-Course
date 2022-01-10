@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  position: relative;
 }
 
 a {
@@ -13,4 +14,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.MuiTablePagination-displayedRows,
+.MuiTablePagination-selectLabel {
+  margin-bottom: 0;
+}
+/* .MuiBackdrop-root {
+  width: 10vw !important;
+} */
+.MuiModal-root {
+  /* display: none; */
+  /* width: 10vw !important; */
+  width: auto !important;
 }
