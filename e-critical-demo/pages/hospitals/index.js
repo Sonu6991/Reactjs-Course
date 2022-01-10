@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import React, { useContext, useEffect } from 'react'
-import Layout from '../Components/Layout/Layout'
-import StickyHeadTable from '../Components/Table/Table'
-import { COLUMNS } from '../columns'
-import { TableContext } from '../ShareableData/TableContext'
+import Layout from '../../Components/Layout/Layout'
+import StickyHeadTable from '../../Components/Table/Table'
+// import StickyHeadTable from '../../Components/Table/Table copy'
+import { COLUMNS } from '../../columns'
+import { TableContext } from '../../ShareableData/TableContext'
 
 const Hospitals = (props) => {
 

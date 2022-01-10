@@ -1,7 +1,20 @@
-/* .MuiTablePagination-displayedRows,
+.MuiTablePagination-displayedRows,
 .MuiTablePagination-selectLabel {
   margin-bottom: 0;
-} */
+}
 .menu {
   cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.6 !important;
+}
+.table-row:hover {
+  background-color: #fff6e3 !important;
+}
+.table-head {
+  text-align: center !important;
+  word-break: break-all !important;
+}
+.td {
+  word-break: break-all !important;
 }

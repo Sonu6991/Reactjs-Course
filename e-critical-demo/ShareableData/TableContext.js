@@ -15,7 +15,9 @@ const TableContextProvider = (props) => {
         const data = await response.json()
         setData(data);
     }
+    const handleContextMenu = () => {
 
+    }
     const value = {
         rowsPerPage,
         setRowsPerPage,

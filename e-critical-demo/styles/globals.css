@@ -27,3 +27,14 @@ a {
   /* width: 10vw !important; */
   width: auto !important;
 }
+.translate-middle {
+  font-size: 14px !important;
+  padding: 3.5px 6.5px !important;
+}
+
+/* .MuiMenu-paper {
+  overflow-y: hidden !important;
+} */
+main {
+  overflow-y: auto;
+}

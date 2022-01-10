@@ -3,57 +3,66 @@ export const COLUMNS = [
     {
         id: 'id',
         label: 'ID',
-        minWidth: 100,
+        minWidth: 20,
         align: 'left',
+        flex: 1
     },
     {
         id: 'first_name',
         label: 'First Name',
-        minWidth: 170,
+        minWidth: 50,
         align: 'left',
+        flex: 2
     },
     {
         id: 'last_name',
         label: 'Last Name',
-        minWidth: 170,
+        minWidth: 50,
         align: 'left',
+        flex: 2
     },
     {
         id: 'email',
         label: 'Email',
-        minWidth: 200,
+        minWidth: 70,
         align: 'left',
+        flex: 4
 
     },
     {
         id: 'gender',
         label: 'Gender',
-        minWidth: 170,
+        minWidth: 10,
         align: 'center',
+        flex: 2
     },
     {
         id: 'ip_address',
         label: 'IP Address',
-        minWidth: 170,
-        align: 'center',
+        minWidth: 20,
+        align: 'left',
+        flex: 2
     },
     {
         id: 'phone',
         label: 'Phone',
-        minWidth: 170,
+        minWidth: 20,
         align: 'center',
+        flex: 2
     },
     {
         id: 'country',
         label: 'Country',
-        minWidth: 170,
-        align: 'center',
+        minWidth: 20,
+        align: 'left',
+        flex: 2
     },
     {
         id: 'action',
         label: 'Action',
-        minWidth: 170,
+        minWidth: 50,
         align: 'center',
+        flex: 1,
         component: <span>xyz</span>
     },
 

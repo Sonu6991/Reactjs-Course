@@ -1,0 +1,8 @@
+.contetMenu-item {
+  font-size: 14px;
+}
+.contextMenu {
+  box-shadow: 2px 3px 15px 2px black;
+  max-height: 300px;
+  overflow-y: auto;
+}
