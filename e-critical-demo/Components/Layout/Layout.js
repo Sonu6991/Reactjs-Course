@@ -23,7 +23,7 @@ const Layout = (props) => {
                     </span>
                 </div>
             </header>
-            <main className={`${classes.main} p-3`}>
+            <main className={`${classes.main} p-3 `}>
                 {props.children}
             </main>
             <footer className={`px-2 ${classes.footer}`}>

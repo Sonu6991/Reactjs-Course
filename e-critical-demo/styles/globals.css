@@ -19,12 +19,7 @@ a {
 .MuiTablePagination-selectLabel {
   margin-bottom: 0;
 }
-/* .MuiBackdrop-root {
-  width: 10vw !important;
-} */
 .MuiModal-root {
-  /* display: none; */
-  /* width: 10vw !important; */
   width: auto !important;
 }
 .translate-middle {
@@ -32,9 +27,20 @@ a {
   padding: 3.5px 6.5px !important;
 }
 
-/* .MuiMenu-paper {
-  overflow-y: hidden !important;
-} */
 main {
   overflow-y: auto;
+}
+.clear-icon {
+  position: absolute !important;
+  left: -25px !important;
+  padding: 5px;
+  border-radius: 50%;
+}
+.clear-icon > svg {
+  height: 14px;
+  width: 14px;
+  color: gray;
+}
+.clear-icon:hover {
+  background-color: #f1f1f1;
 }

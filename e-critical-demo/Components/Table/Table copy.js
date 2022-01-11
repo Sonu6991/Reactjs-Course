@@ -7,19 +7,22 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { TableContext } from '../../ShareableData/TableContext';
-import { Card, TextField } from '@mui/material';
+import { Card } from '@mui/material';
 import classes from './Table.module.css'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useRouter } from 'next/router';
 import LongMenu from '../ContextMenu/other';
 import { IconButton } from '@mui/material';
-import TablePaginationActions from '../test/customePagination';
+
 
 const StickyHeadTable = (props) => {
-      const { columns, data } = props;
+      const { columns, data, pageCount } = props;
       const [page, setPage] = useState(0);
+      const [showContext, setShowContext] = useState(false);
+      const [mousePosition, setMousePosition] = useState(null);
       const { rowsPerPage, setRowsPerPage } = useContext(TableContext)
-
+      const router = useRouter()
+      console.log(router);
       const handleChangePage = (event, newPage) => {
             setPage(newPage);
       };
@@ -52,8 +55,7 @@ const StickyHeadTable = (props) => {
 
       // rows per page
       const handleChangeRowsPerPage = (event) => {
-            // setRowsPerPage(+event.target.value);
-            setRowsPerPage(parseInt(event.target.value, 10));     
+            setRowsPerPage(+event.target.value);
             setPage(0);
       };
       //---------- rows per page
@@ -77,10 +79,7 @@ const StickyHeadTable = (props) => {
                                     </TableRow>
                               </TableHead>
                               <TableBody>
-                                    {(rowsPerPage > 0
-                                          ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                          : data
-                                    ).map((row) => {
+                                    {data.map((row) => {
                                           return (
                                                 <TableRow
                                                       aria-label="more"
@@ -115,12 +114,12 @@ const StickyHeadTable = (props) => {
                                                 </TableRow>
                                           );
                                     })}
-                                    <LongMenu open={open} anchorEl={anchorEl} handleClose={handleMenuClose} />
+                                    <LongMenu open={open} anchorEl={anchorEl} handleClose={handleMenuClose} position={mousePosition} />
                               </TableBody>
                         </Table>
                   </TableContainer>
 
-                  {/* <TablePagination
+                  <TablePagination
                         className="d-flex align-items-center justify-content-end"
                         rowsPerPageOptions={[10, 25, 100]}
                         component="div"
@@ -129,18 +128,8 @@ const StickyHeadTable = (props) => {
                         page={page}
                         onPageChange={handleChangePage}
                         onRowsPerPageChange={handleChangeRowsPerPage}
-                  /> */}
-                  <TablePagination
-                        className="d-flex align-items-center justify-content-end"
-                        rowsPerPageOptions={[5, 10, 25, 100]}
-                        component="div"
-                        count={data.length}
-                        rowsPerPage={rowsPerPage}
-                        page={page}
-                        onPageChange={handleChangePage}
-                        onRowsPerPageChange={handleChangeRowsPerPage}
-                        ActionsComponent={TablePaginationActions}
                   />
+
             </Card >
       );
 }
