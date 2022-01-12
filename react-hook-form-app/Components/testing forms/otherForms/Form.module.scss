@@ -1,0 +1,27 @@
+.div {
+  background-color: black;
+  height: auto;
+  width: 400px;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  h3 {
+    font-weight: bold;
+  }
+}
+.form {
+  input {
+    margin-bottom: 10px;
+  }
+  label {
+    margin-right: 5px;
+  }
+}
+
+.input-margin {
+  margin: 10px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+}

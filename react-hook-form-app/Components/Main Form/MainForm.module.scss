@@ -1,0 +1,26 @@
+.info-div {
+  height: 40vh;
+  display: flex;
+}
+.hopital-info {
+  width: 60vw;
+  margin: 20px 10px 20px 20px;
+}
+
+.contact-person {
+  width: 40vw;
+  margin: 20px 20px 20px 10px;
+}
+
+.add-btn,
+.add-btn:hover {
+  background-color: #3f51b5;
+  color: white;
+  margin: 5px;
+  font-weight: 700;
+}
+.action-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
