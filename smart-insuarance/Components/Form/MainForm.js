@@ -1,16 +1,13 @@
-import { ClassNames } from '@emotion/react'
-import { Button, IconButton, Paper, TextField } from '@mui/material'
+
+import { Button, } from '@mui/material'
 import React, { useState } from 'react'
-import { Controller, useFieldArray, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import CardComp from '../Common/Card';
 import classes from './MainForm.module.scss';
-import AddIcon from '@mui/icons-material/Add';
-import DeleteIcon from '@mui/icons-material/Delete';
-import BlockArray from '../testing forms/BlockArray';
+import MembersForm from './MembersForm';
 import SaveIcon from '@mui/icons-material/Save';
 const defaultValues = {
-      firstName: '',
-      block: [],
+      members: [],
 }
 
 const MainForm = () => {
@@ -36,7 +33,7 @@ const MainForm = () => {
 
                   <div >
                         <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-                              <BlockArray {...{ control, defaultValues, getValues, setValue, errors }} />
+                              <MembersForm {...{ control, defaultValues, getValues, setValue, errors }} />
 
                               <div className={classes["action-container"]}>
                                     <Button type='submit' variant="contained" className={` ${classes["add-btn"]}`} startIcon={<SaveIcon />}>

@@ -1,0 +1,14 @@
+.input {
+  margin: 10px !important;
+}
+.ward-div {
+  display: flex;
+  align-items: center;
+}
+.delete-btn,
+.delete-btn:hover {
+  background-color: #f44336;
+  color: white;
+  margin: 5px;
+  font-weight: 700;
+}
