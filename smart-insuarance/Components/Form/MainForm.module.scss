@@ -1,15 +1,21 @@
 .info-div {
-  height: 40vh;
   display: flex;
 }
 .hopital-info {
-  width: 60vw;
+  width: auto;
   margin: 20px 10px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .contact-person {
-  width: 40vw;
+  min-width: 240px !important;
   margin: 20px 20px 20px 10px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-btn,
@@ -23,4 +29,46 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.input {
+  margin: 10px !important;
+}
+// .hopitalInfo-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+// }
+.profile {
+  border: 2px solid gray !important;
+}
+
+.camera-button,
+.camera-button:hover {
+  background-color: #00468f;
+  color: #fff;
+  border-radius: 30px;
+  padding: 4px 15px;
+  font-size: 14px !important;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+  text-transform: none;
+}
+.select-button,
+.select-button:hover {
+  background-color: #ffb30f;
+  border-radius: 30px;
+  padding: 4px 15px;
+  font-size: 14px !important;
+  font-weight: bold;
+  text-transform: none;
+}
+// .photo-container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+.photo-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }

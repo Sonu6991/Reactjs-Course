@@ -1,0 +1,68 @@
+<LocalizationProvider dateAdapter={DateAdapter}>
+                                                <Controller
+                                                      name={`members[${index}].dob`}
+                                                      control={control}
+                                                      // rules={{ required: "this field is required" }}
+                                                      render={({
+                                                            field: { ref, value, ...field },
+                                                            fieldState: { invalid, error },
+                                                      }) => {
+                                                            return (
+                                                                  // <DesktopDatePicker
+                                                                  //       inputFormat="DD/MM/yyyy"
+                                                                  //       value={dob}
+                                                                  //       {...field}
+                                                                  //       onChange={(value) => {
+                                                                  //             setDob(value);
+                                                                  //       }}
+                                                                  //       renderInput={(params) => (
+                                                                  //             <TextField
+                                                                  //                   label="Date desktop"
+                                                                  //                   className={classes.input}
+                                                                  //                   error={invalid}
+                                                                  //                   inputRef={ref}
+                                                                  //                   {...params}
+                                                                  //                   helperText={
+                                                                  //                         error &&
+                                                                  //                         error.type === "required" &&
+                                                                  //                         "DOb is required"
+                                                                  //                   }
+                                                                  //             />
+                                                                  //       )}
+                                                                  // />
+                                                                  <DatePicker
+                                                                        open={open}
+                                                                        onOpen={() => setOpen(true)}
+                                                                        onClose={() => setOpen(false)}
+                                                                        label="Basic example"
+                                                                        value={dob}
+                                                                        inputFormat="DD/MM/yyyy"
+                                                                        onChange={(newValue) => {
+                                                                              setDob(newValue);
+                                                                        }}
+                                                                        renderInput={(params) => {
+                                                                              return (
+                                                                                    <TextField
+                                                                                          error={invalid}
+                                                                                          {...field}
+                                                                                          inputRef={ref}
+                                                                                          placeholder="dd/mm/yyyy"
+                                                                                          {...params}
+                                                                                          InputLabelProps={{
+                                                                                                shrink: true
+                                                                                          }}
+                                                                                          helperText={
+                                                                                                error &&
+                                                                                                error.type === "required" &&
+                                                                                                "DOb is required"
+                                                                                          }
+
+                                                                                          onClick={(e) => setOpen(true)}
+                                                                                    />
+                                                                              );
+                                                                        }}
+                                                                  />
+                                                            );
+                                                      }}
+                                                />
+                                          </LocalizationProvider>
