@@ -1,0 +1,89 @@
+.mainDiv {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #dedfec;
+}
+
+.staffInfoDiv {
+  display: flex;
+  //   flex-wrap: wrap;
+  .div1 {
+    // flex-shrink: 1;
+    //     margin-right: 14px;
+    flex-grow: 1;
+  }
+  .div2 {
+    flex-grow: 2;
+  }
+}
+
+.branchHeader {
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stepBox {
+  display: flex;
+  align-items: center;
+  .box {
+    background-color: #f1f2f8;
+    padding: 12px 17px 11px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+.addBranchBtn,
+.addBranchBtn:hover {
+  background-color: #f1f2f8;
+  color: #272848;
+  font-weight: 550;
+}
+.city,
+.zip {
+  display: flex;
+  div {
+    flex: 1;
+  }
+}
+.label {
+  font-size: 13px;
+  color: #a19f9d;
+  padding-top: 17px;
+}
+
+.checkboxRoot {
+  svg {
+    color: #fddadb !important;
+  }
+}
+.timingDetails {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 14px;
+    color: #7e7e90;
+  }
+}
+.underline {
+  flex-grow: 1;
+  height: 1px;
+  margin: 19px 0 19px 12px;
+  border-radius: 4px;
+  background-color: #dedfec;
+}
+.formHelperText {
+  color: #d32f2f;
+  margin-left: 14px;
+}

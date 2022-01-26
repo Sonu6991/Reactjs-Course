@@ -1,0 +1,52 @@
+.mainDiv {
+  height: 100vh;
+}
+.infoDiv {
+  padding: 2rem 1rem;
+}
+.MainImgContainer {
+  background: center/cover no-repeat url("/assets/image.png");
+  height: 100%;
+}
+
+.muiBox {
+  height: 44px;
+  width: 44px !important;
+  background-color: rgb(234, 234, 237);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+.title {
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.loginLink {
+  font-size: 14px;
+  span {
+    opacity: 0.8;
+  }
+  a {
+    color: rgb(21, 101, 192) !important;
+    //     color: black;
+    opacity: 1 !important;
+  }
+}
+
+.font700 {
+  font-weight: 700;
+}
+
+.font500 {
+  font-weight: 500;
+}
+.subHeading {
+  margin-top: 1rem;
+}
+
+.boder {
+  border: 1px solid black;
+}

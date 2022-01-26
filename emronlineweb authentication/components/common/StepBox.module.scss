@@ -1,0 +1,19 @@
+.box {
+  height: 44px;
+  width: 44px !important;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+.filledBox {
+  background-color: rgb(234, 234, 237);
+  color: black;
+}
+
+.outlinedBox {
+  background: transparent;
+  border: 1px solid #dedfec;
+  color: #dedfec;
+}

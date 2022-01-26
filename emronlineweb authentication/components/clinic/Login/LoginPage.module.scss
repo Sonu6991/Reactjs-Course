@@ -1,0 +1,103 @@
+.login_grid_container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_grid_clientLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 1000;
+  top: 15%;
+  left: 15%;
+ height: 2vh;
+ float: left;
+ clear: both;
+}
+
+.login_grid_clientLogo_typo {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  //font-size: 44px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+.login_grid_form {
+  position: relative;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+  padding: 0 3%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_grid_form_box {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_grid_logo_sub {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageLogo {
+  max-width: 112px;
+}
+.login_grid_logo_sub_forMoreInfo {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #7e7e90;
+}
+
+.login_grid_logo_sub_hopsLink {
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #272848;
+}
+.login_grid_logo_sub_hopsLink:hover {
+  color: #0645ad;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .login_grid_form >div>form{
+    margin-top: 50%;
+ 
+ }
+}
+
+
+@media only screen and (max-width: 653px) {
+
+  .login_grid_form >div>form{
+    margin-top: 90%;
+ 
+ }  
+}

@@ -1,0 +1,88 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.MuiButton-root {
+  text-transform: none;
+  height: 40px;
+}
+
+/* Margins */
+/* Top */
+.smallTopMargin {
+  margin-top: 5px;
+}
+
+.midTopMargin {
+  margin-top: 10px;
+}
+.largeTopMargin {
+  margin-top: 16px;
+}
+/* right */
+.smallRightMargin {
+  margin-right: 5px;
+}
+
+.midRightMargin {
+  margin-right: 10px;
+}
+.largeRightMargin {
+  margin-right: 16px;
+}
+/* Bottom */
+.smallBottomMargin {
+  margin-bottom: 5px;
+}
+
+.midBottomMargin {
+  margin-bottom: 10px;
+}
+.largeBottomMargin {
+  margin-bottom: 16px;
+}
+
+/* left */
+.smallLeftMargin {
+  margin-left: 5px;
+}
+
+.midLeftMargin {
+  margin-left: 10px;
+}
+.largeLeftMargin {
+  border-color: #fddadb !important;
+  margin-left: 16px;
+}
+.MuiOutlinedInput-root {
+  height: 40px;
+}
+/*.MuiOutlinedInput-root {
+  border-color: #fddadb !important;
+}
+.MuiInputBase-root {
+  border-color: #fddadb !important;
+} */
+
+.link_class {
+  color: rgb(25, 112, 212);
+  /* color: rgb(21,101,192); */
+}
+
+.link_class:hover {
+  color: #033991;
+  font-weight: 600;
+}

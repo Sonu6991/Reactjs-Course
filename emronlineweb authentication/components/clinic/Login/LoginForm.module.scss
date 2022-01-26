@@ -1,0 +1,33 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.loginForm_typo_welcome {
+  color: #1a4382;
+}
+
+.loginForm_typo_pleaseLogin {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a4382;
+  margin-bottom: 7%;
+}
+
+.loginForm_btn_singin {
+  background-color: #1a4382;
+  margin: 8px 0px;
+}
+
+.loginForm_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -3%;
+}
+
+.loginForm_uni_typo {
+  opacity: 0.7;
+}

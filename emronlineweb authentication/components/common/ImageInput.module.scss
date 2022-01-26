@@ -1,0 +1,20 @@
+.inputLabel {
+  font-size: 13px;
+  color: #a19f9d;
+  // padding-top: 17px;
+  border-radius: 4px;
+}
+.attachBtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #f1f2f8;
+  color: #2f2e45;
+}
+.logo {
+  border: 1px solid #fddadb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 16px);
+}
