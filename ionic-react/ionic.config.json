@@ -1,0 +1,7 @@
+{
+  "name": "ionic-react-blank",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
