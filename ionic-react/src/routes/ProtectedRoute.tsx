@@ -1,7 +1,7 @@
 import { IonRouterOutlet } from '@ionic/react';
 import { useContext } from 'react';
-import { Redirect, Route } from 'react-router';
-import { AuthContext } from '../Authentication/Auth';
+import { Redirect, Route, Switch } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
 import Login from '../pages/Login';
 import PageNotFound from '../pages/PageNotFound';
 import { routes } from './routes';
@@ -12,7 +12,8 @@ export const Protectedroute = () => {
       console.log("isAuthenticated", isAuthenticated);
 
       return (
-            <IonRouterOutlet>
+            // <IonRouterOutlet>
+            <Switch>
                   <Route exact path="/login" component={Login} />
                   {routes.map((route: any, i) => {
                         const ComponentObj = route.component as React.FC;
@@ -26,6 +27,7 @@ export const Protectedroute = () => {
                   )}
                   <Route exact path="/" render={() => <Redirect to="/home" />} />
                   <Route component={PageNotFound} />
-            </IonRouterOutlet>
+            </Switch>
+            // </IonRouterOutlet>
       )
 }

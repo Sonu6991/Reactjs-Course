@@ -1,4 +1,26 @@
 .span {
-  max-width: 60px !important;
+  // max-width: 60px !important;
   padding: 0px !important;
+  display: flex !important;
+}
+.row {
+  padding: 0px 5px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #274050;
+}
+.segment {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #c9d4da;
+}
+
+.segmentBtn {
+  --background-checked: white;
+  --color: white !important;
+  --color-checked: #274050 !important;
+  min-height: 39px !important;
+  text-transform: none;
+  --indicator-height: 0px;
 }

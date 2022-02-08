@@ -1,5 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -20,15 +19,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import PageNotFound from './pages/PageNotFound';
-import { routes } from './routes/routes';
-import Login from './pages/Login';
 import { Protectedroute } from './routes/ProtectedRoute';
-import { useContext, useEffect, useState } from 'react';
-import { authentication } from './api/api';
-import { AuthContext } from './Authentication/Auth';
-import AuthProvider from './Authentication/Auth';
-import { useHistory } from "react-router";
+import AuthProvider from './context/AuthContext';
+import ApiProvider from './api/api';
 setupIonicReact();
 
 const App: React.FC = () => {
@@ -36,9 +29,11 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
-        <AuthProvider>
-          <Protectedroute />
-        </AuthProvider>
+        <ApiProvider>
+          <AuthProvider>
+            <Protectedroute />
+          </AuthProvider>
+        </ApiProvider>
       </IonReactRouter>
     </IonApp>
   )

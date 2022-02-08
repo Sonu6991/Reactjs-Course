@@ -4,11 +4,13 @@ import {
   IonButtons,
   IonContent,
   IonHeader,
+  IonList,
   IonPage,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import { useRouteMatch } from "react-router";
+import UserList from "../components/UserList";
 
 const Users: React.FC = () => {
 
@@ -25,8 +27,7 @@ const Users: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div>This is Users page</div>
-        <IonButton routerDirection="forward" routerLink={`${url}/${userId}`}> View User detail </IonButton>
+        <UserList />
       </IonContent>
     </IonPage>
   );

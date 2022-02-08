@@ -7,10 +7,14 @@ import {
       IonTitle,
       IonToolbar,
 } from "@ionic/react";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
+import User from "../components/User";
 
 const UserDetail: React.FC = () => {
       const params: any = useParams()
+      const history = useHistory()
+      const user = history.location.state;
+
       return (
             <IonPage>
                   <IonHeader>
@@ -22,7 +26,7 @@ const UserDetail: React.FC = () => {
                         </IonToolbar>
                   </IonHeader>
                   <IonContent fullscreen>
-                        <div>This is User Detail page and the user id is {params.id}</div>
+                        <User />
                   </IonContent>
             </IonPage>
       );
